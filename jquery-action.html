@@ -140,6 +140,7 @@
 		<div id="other"></div>
 		<script type="text/javascript">
 			$("#submit").click(function() {
+				console.log("click");
 				var time = $("#time").val();
 				var mood = $("#mood").val();
 				var yourPhone = $("#yourPhone").prop( "checked" );
@@ -150,7 +151,8 @@
 
 				var j = JSON.stringify({ time: time, mood: mood, yourPhone: yourPhone, wifePhone: wifePhone, speed: speed, weather: weather, quiet: quiet});
 
-				alert(j);			
+				alert(j);
+				console.log("JSON: " + j);
 				var request = $.ajax({
 					type: "POST",
 					url: "http://ambience.herokuapp.com/SendData",
@@ -168,7 +170,7 @@
 						console.log("errorThrown: " + errorThrown);
 						alert("a");
 				});
-
+				console.log("done ajax");
 			});
 		</script>
 	</div>
