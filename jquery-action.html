@@ -134,7 +134,7 @@
 			</div>
 
 
-			<button  class="pure-button" id="submit">Submit!!</button>
+			<button class="pure-button" id="submit">Submit!!</button>
 			</div>
 		</form>
 		<div id="other"></div>
@@ -155,8 +155,7 @@
 					type: "POST",
 					url: "http://ambience.herokuapp.com/SendData",			            
 					data: j,
-					jsonp: callback,
-					dataType: "jsonp",
+					dataType: "json",
 						success: function () {
 						alert("sent data");
 					}
