@@ -162,10 +162,13 @@
 
 				var j = JSON.stringify(jString);
 
-				alert(jQuery.parseJSON(j));
 
 				alert(j);
 				console.log(j);
+
+				alert(jQuery.parseJSON(j));
+				console.log(jQuery.parseJSON(j).quiet);
+
 				var request = $.ajax({
 					type: "POST",
 					url: "http://ambience.herokuapp.com/SendData",
