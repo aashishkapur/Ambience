@@ -9,7 +9,8 @@ function poll() {
 		console.log("timeout 1");
 		var x = $.ajax({
 			type: 'GET',
-				url: 'http://ambience.herokuapp.com/Longpoll',
+			url: 'http://ambience.herokuapp.com/Longpoll',
+			dataType: "json"
 			success: function (data) {
 				alert("works");
 				alert(data);

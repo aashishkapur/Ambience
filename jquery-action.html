@@ -59,7 +59,6 @@
 					<input id="wifePhoneCheck" type="checkbox"/>
 				</div>
 				<div class="pure-u-1-2">
-
 					<label for="wifePhone">Wife's Phone:</label>
 					<input id="wifePhone" type="checkbox"/><br/>
 				</div>
@@ -130,10 +129,10 @@
 				console.log("click");
 				var time = $("#time").val();
 				var mood = $("#mood").val();
-				var wifePhone = $("#wifePhone").prop( "checked" );
+				var wifePhone = $("#wifePhone").prop("checked").toString();
 				var speed = $("#speed").val();
 				var weather = $("#weather").val();
-				var quiet = $("#quiet").prop( "checked" );
+				var quiet = $("#quiet").prop("checked").toString();
 				var calendar = $("#calendar").val();
 
 				var jString = {
@@ -162,6 +161,8 @@
 					delete jString.calendar;
 
 				var j = JSON.stringify(jString);
+
+				alert(jQuery.parseJSON(j));
 
 				alert(j);
 				console.log(j);
