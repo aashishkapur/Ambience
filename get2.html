@@ -13,7 +13,7 @@ function poll() {
 			url: 'http://ambience.herokuapp.com/Longpoll',
 			beforeSend: function(x) {
 			if(x && x.overrideMimeType) {
-			x.overrideMimeType(jsonMimeType);
+			x.overrideMimeType(mimeType);
 			}
 				},
 			success: function (data) {
