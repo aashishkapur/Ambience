@@ -138,7 +138,9 @@
 				var weather = $("#weather").val();
 				var quiet = $("#quiet").prop( "checked" );
 
-				var j = JSON.stringify({ time: time, mood: mood, wifePhone: wifePhone, speed: speed, weather: weather, quiet: quiet});
+				var t = "time=" + time + "&mood=" + mood + "&wifePhone=" +
+					wifePhone + "&speed=" + speed;
+				// var j = JSON.stringify({ time: time, mood: mood, wifePhone: wifePhone, speed: speed, weather: weather, quiet: quiet});
 
 				alert(j);
 				console.log(j);
