@@ -10,7 +10,7 @@ function poll() {
 		var x = $.ajax({
 			type: 'GET',
 			url: 'http://ambience.herokuapp.com/Longpoll',
-			dataType: "json",
+
 			success: function (data) {
 				alert("works");
 				alert(data);
