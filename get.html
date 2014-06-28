@@ -3,6 +3,7 @@
 </head>
 <script>
 function poll() {
+	var a = 0;
 	console.log("poll top")
 	setTimeout(function () {
 		console.log("timeout 1");
@@ -22,6 +23,7 @@ function poll() {
 			complete: poll
 		});
 		console.log("finish ajax");
+		console.log("a: " + a++);
 	}, 1000);
 	console.log("finish timeout");
 };
