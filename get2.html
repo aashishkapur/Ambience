@@ -1,0 +1,55 @@
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+<script>
+function poll() {
+	var a = 0;
+	console.log("poll top")
+	setTimeout(function () {
+		console.log("timeout 1");
+		var mimeType = "text/plain";
+		var x = $.ajax({
+			type: 'GET',
+			url: 'http://ambience.herokuapp.com/Longpoll',
+			beforeSend: function(x) {
+			if(x && x.overrideMimeType) {
+			x.overrideMimeType(jsonMimeType);
+			}
+				},
+			success: function (data) {
+				alert("works");
+				alert(data);
+				console.log(data);
+			},
+			error: function(xhr, textStatus, errorThrown){
+			console.log("statusText: " + xhr.statusText);
+			console.log("textStatus: " + textStatus);
+			console.log("errorThrown: " + errorThrown);
+			alert(errorThrown);
+			},
+			complete: poll
+		});
+		console.log("finish ajax");
+		console.log("a: " + a++);
+	}, 5000);
+	console.log("finish timeout");
+};
+console.log("line 29");
+poll();
+console.log("finished call to poll()")
+
+// function poll() {
+// 	var x = $.ajax({
+// 		type: 'get',
+// 		url : "http://ambience.herokuapp.com/Longpoll",
+// 		success : function(data) {
+// 			console.log(data);
+// 		},
+// 		dataType : "json",
+// 		complete : poll
+// 	});
+// }
+// poll();
+</script>
+
+
