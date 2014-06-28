@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<!-- 	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/pure.css">
+ -->
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+</head>
+<body>
+	<div id="content">
+		<br/><br/>
+		<form class="pure-form" ACTION="http://ambience.herokuapp.com/SendData" method="POST">
+
+			<div class="pure-g">
+				<div class="pure-u-1-12">
+					<p>change on app</p>
+				</div>
+			</div>
+			
+			<div class="pure-g">
+				<div class="pure-u-1-12">
+					<input name="timeCheck" type="checkbox"/>
+				</div>
+				<div class="pure-u-1-2">
+					<label for="time">Time: </label>
+					<select name="time">
+						<option value="0100"> 1:00 AM</option>
+						<option value="0900"> 9:00 AM</option>
+						<option value="1200">12:00 PM</option>
+						<option value="1500"> 3:00 PM</option>
+						<option value="2100"> 9:00 PM</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="pure-g">
+				<div class="pure-u-1-12">
+					<input name="moodCheck" type="checkbox"/>
+				</div>
+				<div class="pure-u-1-2">
+					<label for="mood">Mood: </label>
+					<select name="mood">
+						<option value="happy">Happy</option>
+						<option value="sad">Sad</option>
+						<option value="romantic">Romantic</option>
+						<option value="sleepy">Sleepy</option>
+						<option value="angry">Angry</option>
+						<option value="stressed">Stressed</option>
+						<option value="party">Party</option>
+					</select>
+				</div>
+			</div>
+			<br/>
+			<div class="pure-g">
+				<div class="pure-u-1-12">
+					<input name="yourPhoneCheck" type="checkbox"/>
+				</div>
+				<div class="pure-u-1-2">
+
+					<label for="yourPhone">Your Phone:</label>
+					<input name="yourPhone" type="checkbox"/><br/>
+				</div>
+			</div>
+			<br/>
+			<div class="pure-g">
+				<div class="pure-u-1-12">
+					<input name="wifePhoneCheck" type="checkbox"/>
+				</div>
+				<div class="pure-u-1-2">
+
+					<label for="wifePhone">Wife's Phone:</label>
+					<input name="wifePhone" type="checkbox"/><br/>
+				</div>
+			</div>
+			<br/>
+
+			<div class="pure-g">
+				<div class="pure-u-1-12">
+					<input name="speedCheck" type="checkbox"/>
+				</div>
+				<div class="pure-u-1-2">
+					<label for="speed">Speed: </label>
+					<select name="speed">
+						<option value="none">None</option>
+						<option value="low">Low</option>
+						<option value="high">High</option>
+					</select><br/>
+				</div>
+			</div>
+
+			<div class="pure-g">
+				<div class="pure-u-1-12">
+					<input name="weatherCheck" type="checkbox"/>
+				</div>
+				<div class="pure-u-1-2">
+					<label for="weather">Weather: </label>
+					<select name1="weather">
+						<option value="rainy">Rainy</option>
+						<option value="sunny">Sunny</option>
+						<option value="cloudy">Cloudy</option>
+					</select><br/>
+				</div>
+			</div>
+
+			<br/>
+			<div class="pure-g">
+				<div class="pure-u-1-12">
+					<input name="quietCheck" type="checkbox"/>
+				</div>
+				<div class="pure-u-1-2">
+					<label for="quiet">Quiet: </label>
+					<input name="quiet" type="checkbox"/><br/>
+				</div>
+			</div>
+			<br/>
+
+			<div class="pure-g">
+				<div class="pure-u-1-12">
+					<input name="calendarCheck" type="checkbox"/>
+				</div>
+				<div class="pure-u-1-2">
+					<label for="calendar">Calendar Event: </label>
+					<select name="calendar">
+						<option value="meeting">Meeting with your Boss</option>
+						<option value="birthday">Wife's Birthday</option>
+						<option value="vacation">Family Vacation</option>
+					</select><br/>
+				</div>
+			</div>
+
+
+			<button type="submit" class="pure-button" id="submit">Submit!!</button>
+			</div>
+		</form>
+		<div id="other"></div>
+		<script type="text/javascript">
+			// $("#submit").click(function() {
+			// 	var time = $("#time").val();
+			// 	var mood = $("#mood").val();
+			// 	var yourPhone = $("#yourPhone").prop( "checked" );
+			// 	var wifePhone = $("#wifePhone").prop( "checked" );
+			// 	var speed = $("#speed").val();
+			// 	var weather = $("#weather").val();
+			// 	var quiet = $("#quiet").prop( "checked" );
+
+			// 		 var j = JSON.stringify({ time: time, mood: mood, yourPhone: yourPhone, wifePhone: wifePhone, speed: speed, weather: weather, quiet: quiet});
+
+			// 		 alert(j);			
+			// 	var request = $.ajax({
+			// 		type: "POST",
+			// 		url: "http://amibience.herokuapp.com/SendData",			            
+			// 		data: j,
+			// 		contentType: "application/json; charset=utf-8",
+			// 		dataType: "json",
+			// 			success: function () {
+			// 			alert("sent data");
+			// 		}
+			// 	});
+
+			// 	request.fail(function(xhr, textStatus, errorThrown){
+			// 				alert("statusText: " + xhr.statusText);
+			// 				alert("textStatus: " + textStatus);
+			// 				alert("errorThrown: " + errorThrown);
+			// 			});
+			// });
+
+
+		</script>
+	</div>
+</body>
+
+</html>
+
+
+
+
+
