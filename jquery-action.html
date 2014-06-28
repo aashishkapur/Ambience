@@ -142,12 +142,12 @@
 					wifePhone + "&speed=" + speed;
 				// var j = JSON.stringify({ time: time, mood: mood, wifePhone: wifePhone, speed: speed, weather: weather, quiet: quiet});
 
-				alert(j);
-				console.log(j);
+				alert(t);
+				console.log(t);
 				var request = $.ajax({
 					type: "POST",
 					url: "http://ambience.herokuapp.com/SendData",
-					data: j,
+					data: t,
 					success: function () {
 						console.log("SENT DATA");
 						alert("sent data");
