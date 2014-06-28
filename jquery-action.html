@@ -135,10 +135,33 @@
 				var speed = $("#speed").val();
 				var weather = $("#weather").val();
 				var quiet = $("#quiet").prop( "checked" );
+				var calendar = $("#calendar").val();
 
-				var t = "time=" + time + "&mood=" + mood + "&wifePhone=" +
-					wifePhone + "&speed=" + speed;
-				 var j = JSON.stringify({ time: time, mood: mood, wifePhone: wifePhone, speed: speed, weather: weather, quiet: quiet});
+				var jString = {
+					time: time,
+					mood: mood,
+					wifePhone: wifePhone,
+					speed: speed,
+					weather: weather,
+					quiet: quiet,
+					calendar: calendar
+				};
+				if($("#timeCheck").prop("checked"))
+					delete jString.time;
+				if($("#moodCheck").prop("checked"))
+					delete jString.mood;
+				if($("#wifePhoneCheck").prop("checked"))
+					delete jString.wifePhone;
+				if($("#speedCheck").prop("checked"))
+					delete jString.speed;
+				if($("#weatherCheck").prop("checked"))
+					delete jString.weather;
+				if($("#quietCheck").prop("checked"))
+					delete jString.quiet;
+				if($("#calendarCheck").prop("checked"))
+					delete jString.calendar;
+
+				var j = JSON.stringify(jString);
 
 				alert(j);
 				console.log(j);
