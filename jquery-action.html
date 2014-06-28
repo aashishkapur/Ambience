@@ -55,17 +55,7 @@
 					</select>
 				</div>
 			</div>
-			<br/>
-			<div class="pure-g">
-				<div class="pure-u-1-24"></div><div class="pure-u-1-12">
-					<input id="yourPhoneCheck" type="checkbox"/>
-				</div>
-				<div class="pure-u-1-2">
 
-					<label for="yourPhone">Your Phone:</label>
-					<input id="yourPhone" type="checkbox"/><br/>
-				</div>
-			</div>
 			<br/>
 			<div class="pure-g">
 				<div class="pure-u-1-24"></div><div class="pure-u-1-12">
@@ -143,22 +133,21 @@
 				console.log("click");
 				var time = $("#time").val();
 				var mood = $("#mood").val();
-				var yourPhone = $("#yourPhone").prop( "checked" );
 				var wifePhone = $("#wifePhone").prop( "checked" );
 				var speed = $("#speed").val();
 				var weather = $("#weather").val();
 				var quiet = $("#quiet").prop( "checked" );
 
-				var j = JSON.stringify({ time: time, mood: mood, yourPhone: yourPhone, wifePhone: wifePhone, speed: speed, weather: weather, quiet: quiet});
+				var j = JSON.stringify({ time: time, mood: mood, wifePhone: wifePhone, speed: speed, weather: weather, quiet: quiet});
 
 				alert(j);
-				console.log("JSON: " + j);
+				console.log(j);
 				var request = $.ajax({
 					type: "POST",
 					url: "http://ambience.herokuapp.com/SendData",
 					data: j,
 					success: function () {
-						console.log("a");
+						console.log("SENT DATA");
 						alert("sent data");
 					}
 				});
