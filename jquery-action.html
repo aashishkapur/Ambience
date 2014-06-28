@@ -159,7 +159,7 @@
 
 				var j = JSON.stringify(jString);
 
-				alert(j);
+				//alert(j);
 				console.log(j);
 				var request = $.ajax({
 					type: "POST",
@@ -169,17 +169,17 @@
 					dataType: "json",
 					success: function () {
 						console.log("SENT DATA");
-						alert("sent data");
+						//alert("sent data");
 					},
 					error: function(xhr, textStatus, errorThrown){
 						console.log("statusText: " + xhr.statusText);
 						console.log("textStatus: " + textStatus);
 						console.log("errorThrown: " + errorThrown);
-						alert("a");
+						//alert("a");
 					}
 				});
 				console.log("done ajax");
-				alert("done");
+				//alert("done");
 			});
 		</script>
 	</div>
