@@ -145,6 +145,7 @@
 					quiet: quiet,
 					calendar: calendar
 				};
+
 				if($("#timeCheck").prop("checked"))
 					delete jString.time;
 				if($("#moodCheck").prop("checked"))
@@ -162,7 +163,7 @@
 
 				var j = JSON.stringify(jString);
 
-				//alert(j);
+				alert(j);
 				console.log(j);
 				var request = $.ajax({
 					type: "POST",
@@ -172,7 +173,7 @@
 					dataType: "json",
 					success: function () {
 						console.log("SENT DATA");
-						//alert("sent data");
+						alert("sent data");
 					},
 					error: function(xhr, textStatus, errorThrown){
 						console.log("statusText: " + xhr.statusText);

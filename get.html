@@ -19,6 +19,7 @@ function poll() {
 			console.log("statusText: " + xhr.statusText);
 			console.log("textStatus: " + textStatus);
 			console.log("errorThrown: " + errorThrown);
+			alert(errorThrown);
 			},
 			complete: poll
 		});
