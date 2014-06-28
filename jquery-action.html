@@ -169,6 +169,8 @@
 				alert(jQuery.parseJSON(j));
 				console.log(jQuery.parseJSON(j).quiet);
 
+			    $.support.cors = true;
+
 				var request = $.ajax({
 					type: "POST",
 					url: "http://ambience.herokuapp.com/SendData",
